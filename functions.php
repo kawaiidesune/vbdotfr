@@ -67,6 +67,7 @@
 		wp_enqueue_script('bootstrap', get_stylesheet_directory_uri() . '/js/bootstrap.min.js', array('jquery'));
 		wp_enqueue_script('site', get_stylesheet_directory_uri() . '/js/site.js', array( 'jquery' ) );
 
+		wp_enqueue_style('fira-sans', 'https://fonts.googleapis.com/css?family=Fira+Sans:400,400i,700,700i');
 		wp_enqueue_style('bootstrap', get_stylesheet_directory_uri().'/css/bootstrap.min.css');
 		wp_enqueue_style( 'screen', get_stylesheet_directory_uri().'/style.css', '', '', 'screen' );
 	}	
