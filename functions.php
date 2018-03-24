@@ -63,9 +63,9 @@
 	 */
 
 	function starkers_script_enqueuer() {
-		wp_enqueue_script('popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', array('jquery'))
-		wp_enqueue_script('bootstrap', get_template_directory_uri(). '/js/bootstrap.min.js', array('jquery'));
-		wp_enqueue_script( 'site', get_template_directory_uri().'/js/site.js', array( 'jquery' ) );
+		wp_enqueue_script('popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', array('jquery'));
+		wp_enqueue_script('bootstrap', get_stylesheet_directory_uri() . '/js/bootstrap.min.js', array('jquery'));
+		wp_enqueue_script('site', get_stylesheet_directory_uri() . '/js/site.js', array( 'jquery' ) );
 
 		wp_enqueue_style('bootstrap', get_stylesheet_directory_uri().'/css/bootstrap.min.css');
 		wp_enqueue_style( 'screen', get_stylesheet_directory_uri().'/style.css', '', '', 'screen' );
