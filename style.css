@@ -23,8 +23,6 @@ CONTENTS:
 01 Sensible defaults ----------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------- */
 
-@import "css/reset.css";
-
 div,
 article,
 section,
@@ -55,13 +53,6 @@ body,
 input,
 textarea 			{ /* We strongly recommend you declare font-weight using numerical values, but check to see which weights you're exporting first */ }
 
-h1, 
-h2, 
-h3, 
-h4, 
-h5, 
-h6 					{ font-weight:bold; /* This helps to identify headings at the initial build stage, but you should write something more precise later on */ }
-
 body {
 	font-family: 'Fira Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	font-weight: 400;
@@ -73,6 +64,15 @@ strong {
 
 strong em {
 	font-weight: 700;
+}
+
+h2, h3, h4, h5, h6 {
+	font-weight: 600;
+}
+
+article img {
+	max-width: 100%;
+	height: auto;
 }
 
 /* ---------------------------------------------------------------------------------------------------------- 

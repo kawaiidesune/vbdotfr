@@ -9,10 +9,10 @@
  * @since 		Starkers 4.0
  */
 Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) );
-if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+if ( have_posts() ) while ( have_posts() ) : the_post();
+?>
 <article>
-
-	<h2><?php the_title(); ?></h2>
+	<h1 class="display-1"><?php the_title(); ?></h1>
 	<time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time> 
 	<?php
 	comments_popup_link('Leave a Comment', '1 Comment', '% Comments');
@@ -25,5 +25,7 @@ if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 	endif;
 	comments_template( '', true ); ?>
 </article>
-<?php endwhile;
-Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>
+<?php
+endwhile;
+Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) );
+?>
