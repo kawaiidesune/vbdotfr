@@ -100,6 +100,34 @@
 		<?php endif;
 	}
 	
+	function starkers_create_post_type() {
+		register_post_type( 'project',
+			array(
+				'labels' => array(
+					'name'				=>	__('Projects', 'starkers'),
+					'singular_name'		=>	__('Project', 'starkers'),
+					'menu_name'			=>	_x('Projects', 'admin menu', 'starkers'),
+					'name_admin_bar'	=>	_x('Project', 'add new on admin bar', 'starkers'),
+					'add_new'			=>	_x('Add New', 'project', 'starkers'),
+					'add_new_item'		=>	__('Add New Project', 'starkers'),
+					'new_item'			=>	__('New Project', 'starkers'),
+					'edit_item'			=>	__('Edit Project', 'starkers'),
+					'view_item'			=>	__('View Project', 'starkers'),
+					'all_items'			=>	__('All Projects', 'starkers'),
+					'search_items'		=>	__('Search Projects', 'starkers'),
+					'parent_item_colon'	=>	__('Parent Projects:', 'starkers'),
+					'not_found'			=>	__('No projects found', 'stakers'),
+					'not_found_in_trash'=>	__('No projects found in Trash.', 'starkers')
+				),
+				'description' => __('Projects that are not portfolio pieces', 'starkers'),
+				'public' => true,
+				'has_archive' => true
+				'rewrite' => array('slug' => _x('projects','Slug for projects','starkers'))
+			)
+		);
+	}
+	add_action('init', 'starkers_create_post_type');
+
 	/**
 	 * starkers_menus function.
 	 * 
