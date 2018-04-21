@@ -75,6 +75,32 @@ article img {
 	height: auto;
 }
 
+footer {
+	background-color: #333;
+	color: #fff;
+	padding-top: 2em;
+	padding-bottom: 2em;
+}
+footer .row {
+	margin-bottom: 1em;
+}
+footer .row-final {
+	margin-bottom: 0;
+}
+footer #footer-soc {
+	font-size: 3em;
+}
+footer #footer-soc a, footer #footer-soc a:active, footer #footer-soc a:visited {
+	color: #666;
+}
+footer #footer-soc a:hover {
+	color: #444;
+}
+footer #footer-copyright {
+	font-style: italic;
+	font-size: 2em;
+	text-align: center;
+}
 /* ---------------------------------------------------------------------------------------------------------- 
 03 Media queries (using a mobile-first approach) ------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------- */

@@ -15,7 +15,8 @@
 	
 	======================================================================================================================== */
 
-	require_once( 'external/starkers-utilities.php' );
+	require_once(get_template_directory() . '/external/starkers-utilities.php');
+	require_once(get_template_directory() . '/external/wp-bootstrap-navwalker.php');
 
 	/* ========================================================================================================================
 	
@@ -69,6 +70,7 @@
 
 		wp_enqueue_style('fira-sans', 'https://fonts.googleapis.com/css?family=Fira+Sans:400,400i,600,600i,700,700i');
 		wp_enqueue_style('bootstrap', get_stylesheet_directory_uri().'/css/bootstrap.min.css');
+		wp_enqueue_style('font-awesome', 'https://pro.fontawesome.com/releases/v5.0.10/css/all.css');
 		wp_enqueue_style( 'screen', get_stylesheet_directory_uri().'/style.css', '', '', 'screen' );
 	}	
 
@@ -97,3 +99,22 @@
 			</article>
 		<?php endif;
 	}
+	
+	/**
+	 * starkers_menus function.
+	 * 
+	 * This enqueues the footer and top nav menus.
+	 * 
+	 * @access public
+	 * @return void
+	 */
+	function starkers_menus() {
+		register_nav_menus(
+			array(
+				'top-menu' => __('Top Menu'),
+				'footer-menu' => __('Footer Menu')
+			)
+		);
+	}
+	add_action('init', 'starkers_menus');
+?>

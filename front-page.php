@@ -1,6 +1,6 @@
 <?php
 /**
- * The main template file
+ * The front page template file
  * This is the most generic template file in a WordPress theme
  * and one of the two required files for a theme (the other being style.css).
  * It is used to display a page when nothing more specific matches a query.
@@ -14,19 +14,5 @@
  */
 Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) );
 
-if ( have_posts() ):
-?>
-<h2><?php _e('Latest Posts','starkers'); ?></h2>
-<?php while ( have_posts() ) : the_post(); ?>
-		<article>
-			<h1><a href="<?php esc_url( the_permalink() ); ?>" title="<?php printf(__('Permalink to %','starkers'), the_title()); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
-			<time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time> <?php comments_popup_link('Leave a Comment', '1 Comment', '% Comments'); ?>
-			<?php the_content(); ?>
-		</article>
-<?php endwhile; ?>
-<?php else: ?>
-<h2><?php _e('No posts to display','starkers'); ?></h2>
-<?php
-endif;
 Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer') );
 ?>
