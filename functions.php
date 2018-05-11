@@ -145,4 +145,18 @@
 		);
 	}
 	add_action('init', 'starkers_menus');
+	
+	/**
+	 * starkers_theme_slug_setup function.
+	 * 
+	 * It's the new way of rendering titles in WordPress themes since 4.1
+	 * 
+	 * @access public
+	 * @return void
+	 * @see https://make.wordpress.org/core/2014/10/29/title-tags-in-4-1/
+	 */
+	function starkers_theme_slug_setup() {
+		add_theme_support('title-tag');
+	}
+	add_action('after_setup_theme', 'starkers_theme_slug_setup');
 ?>
