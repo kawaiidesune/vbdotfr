@@ -100,6 +100,50 @@
 		<?php endif;
 	}
 	
+	function starkers_widgets_init() {
+		register_sidebar(
+			array(
+				'name'			=>	'Footer - far left',
+				'id'			=>	'footer_1',
+				'before_widget'	=>	'<div>',
+				'after_widget'	=>	'</div>',
+				'before_title'	=>	'<h2>',
+				'after_title'	=>	'</h2>'
+			)
+		);
+		register_sidebar(
+			array(
+				'name'			=>	'Footer - centre left',
+				'id'			=>	'footer_2',
+				'before_widget'	=>	'<div>',
+				'after_widget'	=>	'</div>',
+				'before_title'	=>	'<h2>',
+				'after_title'	=>	'</h2>'
+			)
+		);
+		register_sidebar(
+			array(
+				'name'			=>	'Footer - centre right',
+				'id'			=>	'footer_3',
+				'before_widget'	=>	'<div>',
+				'after_widget'	=>	'</div>',
+				'before_title'	=>	'<h2>',
+				'after_title'	=>	'</h2>'
+			)
+		);
+		register_sidebar(
+			array(
+				'name'			=>	'Footer - far right',
+				'id'			=>	'footer_4',
+				'before_widget'	=>	'<div>',
+				'after_widget'	=>	'</div>',
+				'before_title'	=>	'<h2>',
+				'after_title'	=>	'</h2>'
+			)
+		);
+	}
+	add_action('widgets_init', 'starkers_widgets_init');
+	
 	function starkers_create_post_type() {
 		register_post_type( 'project',
 			array(
