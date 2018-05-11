@@ -14,39 +14,30 @@
 ?>
 <div id="comments">
 	<?php if ( post_password_required() ) : ?>
-	<p><?php _e('This post is password protected. Enter the password to view any comments.','starkers'); ?></p>
-</div>
-
+		<p><?php _e('This post is password protected. Enter the password to view any comments.','starkers'); ?></p>
+	</div>
 	<?php
-			/* Stop the rest of comments.php from being processed,
-			 * but don't kill the script entirely -- we still have
-			 * to fully load the template.
-			 */
-			return;
-		endif;
-	?>
-
-	<?php // You can start editing here -- including this comment! ?>
-
-	<?php if ( have_comments() ) : ?>
-
-	<h2><?php comments_number(); ?></h2>
-
-	<ol>
-		<?php wp_list_comments( array( 'callback' => 'starkers_comment' ) ); ?>
-	</ol>
-
-	<?php
-		/* If there are no comments and comments are closed, let's leave a little note, shall we?
-		 * But we don't want the note on pages or post types that do not support comments.
+		/* Stop the rest of comments.php from being processed,
+		 * but don't kill the script entirely -- we still have
+		 * to fully load the template.
 		 */
-		elseif ( ! comments_open() && ! is_page() && post_type_supports( get_post_type(), 'comments' ) ) :
+		return;
+	endif;
+	
+	if ( have_comments() ) : ?>
+		<h2><?php comments_number(); ?></h2>
+		<ol>
+			<?php wp_list_comments( array( 'callback' => 'starkers_comment' ) ); ?>
+		</ol>
+	<?php
+	/* If there are no comments and comments are closed, let's leave a little note, shall we?
+	 * But we don't want the note on pages or post types that do not support comments.
+	 */
+	elseif ( ! comments_open() && ! is_page() && post_type_supports( get_post_type(), 'comments' ) ) :
 	?>
-	
-	<p><?php _e('Comments are closed','starkers'); ?></p>
-	
-	<?php endif; ?>
-
-	<?php comment_form(); ?>
-
+		<p><?php _e('Comments are closed','starkers'); ?></p>
+	<?php
+	endif;
+	comment_form();
+	?>
 </div><!-- #comments -->

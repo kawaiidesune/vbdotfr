@@ -14,6 +14,9 @@
  * @since 		Starkers 4.0
  */
 Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) );
+?>
+<div class="container">
+<?php
 if ( have_posts() ):
 	if ( is_day() ) : $date = get_the_date( 'D M Y' );
 	elseif ( is_month() ) : $date = get_the_date( 'M Y' );
@@ -38,5 +41,7 @@ if ( have_posts() ):
 <?php else: ?>
 <h2><?php _e('No posts to display','starkers'); ?></h2>	
 <?php endif; ?>
-
-<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>
+</div>
+<?php
+Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) );
+?>

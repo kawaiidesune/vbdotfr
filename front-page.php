@@ -14,10 +14,12 @@
  */
 Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) );
 ?>
-<h1 class="display-1 float-right">Salut! <small><?php _e('That is French for "Howdy"', 'starkers'); ?></small></h1>
-<h2 class="display-2 float-right"><a href="/about"><?php _e('My name is Véronique Bellamy', 'starkers'); ?></a></h2>
-<h2 class="display-2 float-right"><a href="/blog"><?php _e('Read my thoughts.'); ?></a></h2>
-<h2 class="display-2 float-right"><?php _e('This site is still under construction', 'starkers'); ?> <small><a href="https://github.com/kawaiidesune/vbdotfr"><?php _e('But I am working on it', 'starkers'); ?></a></small></h2>
+<div class="container-fluid">
+	<h1 class="display-1 text-right">Salut! <small><?php _e('That is French for "Howdy"', 'starkers'); ?></small></h1>
+	<h2 class="display-2 text-right"><a href="/about"><?php _e('My name is Véronique Bellamy', 'starkers'); ?></a></h2>
+	<h2 class="display-2 text-right"><a href="/blog"><?php _e('Read my thoughts.'); ?></a></h2>
+	<h2 class="display-2 text-right"><?php _e('This site is still under construction', 'starkers'); ?> <small><a href="https://github.com/kawaiidesune/vbdotfr"><?php _e('But I am working on it', 'starkers'); ?></a></small></h2>
+</div>
 <?php
 Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer') );
 ?>

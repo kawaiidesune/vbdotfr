@@ -14,10 +14,14 @@
  * @since 		Starkers 4.0
  */
 Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) );
-if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-<h2><?php the_title(); ?></h2>
-<?php the_content();
-comments_template( '', true );
-endwhile;
-
-Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>
+?>
+<div class="container-fluid">
+	<?php
+	if ( have_posts() ) while ( have_posts() ) : the_post();
+	?>
+		<h1 class="display-1"><?php the_title(); ?></h1>
+		<?php the_content();
+	endwhile;
+	?>
+</div>
+<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>

@@ -10,7 +10,7 @@
  */
 ?>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
-
-<h2><?php _e('Page not found','starkers'); ?></h2>
-
+<div class="container-fluid">
+	<h1 class="display-1 text-center"><?php _e('Page not found','starkers'); ?></h1>
+</div>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>
