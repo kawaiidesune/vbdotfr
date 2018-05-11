@@ -103,7 +103,13 @@ footer #footer-copyright {
  * ------------------------------------------------------------
  */
 .home .container-fluid {
-	margin: 7em 0;
+	margin: 15em 0;
+}
+.home .container-fluid a {
+	color: #bbb;
+}
+.home .container-fluid a:hover {
+	color: #333;
 }
 .home .container-fluid .display-1 {
 	padding-bottom: 0.25em;
