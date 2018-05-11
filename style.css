@@ -15,8 +15,11 @@ Text Domain:	vbdotfr
  * 
  * 01 Sensible defaults
  * 02 Typography
- * 03 Home page
- * 04 Media queries 
+ * 03 Navbar
+ * 04 Footer
+ * 05 Home page
+ * 06 Error 404
+ * 07 Media queries 
  * ------------------------------------------------------------
  */
 
@@ -70,6 +73,18 @@ article img {
 	height: auto;
 }
 
+/*
+ * ------------------------------------------------------------
+ * 03 Navbar
+ * ------------------------------------------------------------
+ */
+
+
+/*
+ * ------------------------------------------------------------
+ * 04 Footer
+ * ------------------------------------------------------------
+ */
 footer {
 	background-color: #333;
 	color: #fff;
@@ -99,7 +114,7 @@ footer #footer-copyright {
 
 /*
  * ------------------------------------------------------------
- * 03 Home page
+ * 05 Home page
  * ------------------------------------------------------------
  */
 .home .container-fluid {
@@ -120,7 +135,21 @@ footer #footer-copyright {
 
 /*
  * ------------------------------------------------------------
- * 04 Media queries (using a mobile-first approach) 
+ * 06 Error 404
+ * ------------------------------------------------------------
+ */
+.error404 {
+	background-image: url("https://c2.staticflickr.com/4/3512/3755499653_a26fcd4abf_b.jpg");
+	background-size: cover;
+}
+.error404 .container-fluid {
+	margin-top: 6em;
+	margin-bottom: 30em;
+}
+
+/*
+ * ------------------------------------------------------------
+ * 07 Media queries (using a mobile-first approach) 
  * ------------------------------------------------------------
  */
 
