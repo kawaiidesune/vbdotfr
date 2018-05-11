@@ -121,7 +121,7 @@
 				),
 				'description' => __('Projects that are not portfolio pieces', 'starkers'),
 				'public' => true,
-				'has_archive' => true
+				'has_archive' => true,
 				'rewrite' => array('slug' => _x('projects','Slug for projects','starkers'))
 			)
 		);
