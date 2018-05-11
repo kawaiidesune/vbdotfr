@@ -18,7 +18,7 @@ Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'part
 	<?php
 	if ( have_posts() ):
 	?>
-		<h1><?php _e('Latest Posts','starkers'); ?></h1>
+		<h1 class="display-1"><?php _e('Latest Posts','starkers'); ?></h1>
 		<?php while ( have_posts() ) : the_post(); ?>
 			<article>
 				<h1><a href="<?php esc_url( the_permalink() ); ?>" title="<?php printf(__('Permalink to %','starkers'), the_title()); ?>" rel="bookmark"><?php the_title(); ?></a></h1>

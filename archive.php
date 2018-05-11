@@ -22,11 +22,11 @@ if ( have_posts() ):
 	elseif ( is_month() ) : $date = get_the_date( 'M Y' );
 	elseif ( is_year() ) : $date = get_the_date( 'Y' );
 ?>
-<h2><?php if ($date) {
+<h1 class="display-1"><?php if ($date) {
 	printf(__('Archive: %s','starkers'),$date);
 } else {
 	_e('Archive','starkers');
-}?></h2>
+}?></h1>
 <ol>
 <?php while ( have_posts() ) : the_post(); ?>
 	<li>
