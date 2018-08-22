@@ -23,10 +23,11 @@
 				?></div>
 			</div>
 			<div class="row text-center" id="footer-soc">
-				<div class="col-md-3 col-6"><a href="https://github.com/kawaiidesune"><i class="fab fa-github"></i></a></div>
-				<div class="col-md-3 col-6"><a href="https://dribbble.com/veroniquebellamy"><i class="fab fa-dribbble"></i></a></div>
-				<div class="col-md-3 col-6"><a href="https://www.linkedin.com/in/vbellamy/"><i class="fab fa-linkedin"></i></a></div>
-				<div class="col-md-3 col-6"><a href="https://profiles.wordpress.org/vmbellamy"><i class="fab fa-wordpress"></i></a></div>
+				<div class="col-md-2 offset-md-1 col-6"><a href="https://github.com/kawaiidesune"><i class="fab fa-github"></i></a></div>
+				<div class="col-md-2 col-6"><a href="https://dribbble.com/veroniquebellamy"><i class="fab fa-dribbble"></i></a></div>
+				<div class="col-md-2 col-6"><a href="https://www.linkedin.com/in/vbellamy/"><i class="fab fa-linkedin"></i></a></div>
+				<div class="col-md-2 col-6"><a href="https://profiles.wordpress.org/vmbellamy"><i class="fab fa-wordpress"></i></a></div>
+				<div class="col-md-2 col-6"><a href="https://mozillians.org/u/v/"><i class="fab fa-firefox"></i></a></div>
 			</div>
 			<div class="row row-final">
 				<div class="col"><p id="footer-copyright"><?php _e('&copy; 1987-forever and a day Véronique Bellamy. All rights reserved.', 'starkers'); ?></p></div>
