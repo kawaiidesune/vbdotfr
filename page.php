@@ -7,13 +7,13 @@
  * and that other 'pages' on your WordPress site will use a
  * different template.
  *
- * Please see /external/starkers-utilities.php for info on Starkers_Utilities::get_template_parts()
+ * Please see /external/vbdotfr-utilities.php for info on VBDotFR_Utilities::get_template_parts()
  *
  * @package 	WordPress
- * @subpackage 	Starkers
- * @since 		Starkers 4.0
+ * @subpackage 	VBDotFR
+ * @since 		VBDotFR 1.0
  */
-Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) );
+VBDotFR_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) );
 ?>
 <div class="container-fluid">
 	<?php
@@ -24,4 +24,4 @@ Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'part
 	endwhile;
 	?>
 </div>
-<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>
+<?php VBDotFR_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>

@@ -6,13 +6,13 @@
  * It is used to display a page when nothing more specific matches a query.
  * E.g., it puts together the home page when no home.php file 
  *
- * Please see /external/starkers-utilities.php for info on Starkers_Utilities::get_template_parts()
+ * Please see /external/vbdotfr-utilities.php for info on VBDotFR_Utilities::get_template_parts()
  *
  * @package 	WordPress
- * @subpackage 	Starkers
- * @since 		Starkers 4.0
+ * @subpackage 	VBDotFR
+ * @since 		VBDotFR 1.0
  */
-Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) );
+VBDotFR_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) );
 ?>
 <div class="container-fluid">
 	<h1 class="display-1 text-right">Salut! <small><?php _e('That is French for "Howdy"', 'starkers'); ?></small></h1>
@@ -21,5 +21,5 @@ Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'part
 	<h4 class="display-4 text-right"><?php _e('This site is still under construction', 'starkers'); ?> <small><a href="https://github.com/kawaiidesune/vbdotfr">But I <em>am</em> working on it</a></small></h4>
 </div>
 <?php
-Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer') );
+VBDotFR_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer') );
 ?>

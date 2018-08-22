@@ -6,31 +6,31 @@
  * It is used to display a page when nothing more specific matches a query.
  * E.g., it puts together the home page when no home.php file 
  *
- * Please see /external/starkers-utilities.php for info on Starkers_Utilities::get_template_parts()
+ * Please see /external/vbdotfr-utilities.php for info on VBDotFR_Utilities::get_template_parts()
  *
  * @package 	WordPress
- * @subpackage 	Starkers
- * @since 		Starkers 4.0
+ * @subpackage 	VBDotFR
+ * @since 		VBDotFR 1.0
  */
-Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) );
+VBDotFR_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) );
 ?>
 <div class="container">
 	<?php
 	if ( have_posts() ):
 	?>
-		<h1 class="display-1"><?php _e('Latest Posts','starkers'); ?></h1>
+		<h1 class="display-1"><?php _e('Latest Posts','VBDotFR'); ?></h1>
 		<?php while ( have_posts() ) : the_post(); ?>
 			<article>
-				<h1><a href="<?php esc_url( the_permalink() ); ?>" title="<?php printf(__('Permalink to %','starkers'), the_title()); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+				<h1><a href="<?php esc_url( the_permalink() ); ?>" title="<?php printf(__('Permalink to %','VBDotFR'), the_title()); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 				<time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time> <?php comments_popup_link('Leave a Comment', '1 Comment', '% Comments'); ?>
 				<?php the_content(); ?>
 			</article>
 		<?php
 		endwhile;
 	else: ?>
-		<h1><?php _e('No posts to display','starkers'); ?></h1>
+		<h1><?php _e('No posts to display','VBDotFR'); ?></h1>
 	<?php endif; ?>
 </div>
 <?php
-Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer') );
+VBDotFR_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer') );
 ?>

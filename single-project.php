@@ -2,13 +2,11 @@
 /**
  * The Template for displaying all single projects.
  *
- * Please see /external/starkers-utilities.php for info on Starkers_Utilities::get_template_parts()
- *
  * @package 	WordPress
- * @subpackage 	Starkers
- * @since 		Starkers 4.0
+ * @subpackage 	VBDotFR
+ * @since 		VBDotFR 1.0
  */
-Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) );
+VBDotFR_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) );
 ?>
 <div class="container">
 	<?php
@@ -22,7 +20,7 @@ Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'part
 		the_content();
 		if ( get_the_author_meta( 'description' ) ) :
 			echo get_avatar( get_the_author_meta( 'user_email' ) ); ?>
-		<h3><?php printf(__('About %s','starkers'), get_the_author()) ; ?></h3>
+		<h3><?php printf(__('About %s','VBDotFR'), get_the_author()) ; ?></h3>
 		<?php
 			the_author_meta( 'description' );
 		endif;
@@ -33,5 +31,5 @@ Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'part
 	?>
 </div>
 <?php
-Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) );
+VBDotFR_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) );
 ?>
